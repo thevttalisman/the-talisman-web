@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteBase /
+RewriteRule ^index.html$ index.php 
+RewriteRule ^submit.html$ submissions.php 
+RewriteRule ^team.html$ members.php 
+
+Redirect /submit /submit.html
