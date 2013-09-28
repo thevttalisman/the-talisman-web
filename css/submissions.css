@@ -19,7 +19,7 @@
 		height: 150px;
 	}
 
-	input.form, input.formsubmit, select.form, option.form, textarea.form, input.captcha {
+	input.form, input.formsubmit, select.form, option.form, textarea.form, input.captcha, #recaptcha_image {
 		color: #000000;
 		font-size: 12px;
 		border: 1px solid #C8C8C8;
@@ -34,7 +34,7 @@
 		border: 1px solid #dc4f4f !important;
 	}
 
-	input.form:hover, input.form:focus, select.form:hover, textarea.form:hover, select.form:focus, textarea.form:focus {
+	input.form:hover, input.form:focus, input.captcha:hover, input.captcha:focus, select.captcha:hover, textarea.form:hover, select.form:focus, textarea.form:focus {
 		border: 1px solid #000000;
 	}
 
