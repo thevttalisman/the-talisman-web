@@ -28,7 +28,7 @@
 		.member .pic {
 			width: 124px;
 			height: 124px;
-			background-color: green;
+			background-color: #fff;
 			background-size: 124px;
 			background-image: url(pics/faces/missing.png);
 			margin: 0px 15px 15px 0px;
@@ -63,12 +63,12 @@
 			<li>
 				<a href="#" onclick="return false;">Newspapers</a>
 				<ul>
-					<li><a href="/#e=201304">April 2013</a></li>
-					<li><a href="/#e=201309">September 2013</a></li>
+					<li><a href="/index.html#e=201304">April 2013</a></li>
+					<li><a href="/index.html#e=201309">September 2013</a></li>
 				</ul>
 			</li>
 			<li><a href="/submit.html">Submit</a></li>
-			<li><a href="/about.html" class="selected">The Team</a></li>
+			<li><a href="/team.html" class="selected">The Team</a></li>
 		</ul>
 	</div>
 	

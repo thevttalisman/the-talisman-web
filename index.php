@@ -31,7 +31,7 @@
 				</ul>
 			</li>
 			<li><a href="/submit.html">Submit</a></li>
-			<li><a href="/about.html">The Team</a></li>
+			<li><a href="/team.html">The Team</a></li>
 		</ul>
 	</div>
 	

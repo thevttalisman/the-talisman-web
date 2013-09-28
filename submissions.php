@@ -112,16 +112,16 @@ function errorCheck($field){
 	<div id="header">
 		<div id="logo"></div>
 		<ul id="nav">
-			<li><a href="/">Home</a></li>
+			<li><a href="/index.html">Home</a></li>
 			<li>
 				<a href="javascript:void(0);">Newspapers</a>
 				<ul>
-					<li><a href="/#e=201304">April 2013</a></li>
-					<li><a href="/#e=201309">September 2013</a></li>
+					<li><a href="/index.html#e=201304">April 2013</a></li>
+					<li><a href="/index.html#e=201309">September 2013</a></li>
 				</ul>
 			</li>
-			<li><a href="/submit" class="selected">Submit</a></li>
-			<li><a href="/contact/">The Team</a></li>
+			<li><a href="/submit.html" class="selected">Submit</a></li>
+			<li><a href="/team.html">The Team</a></li>
 		</ul>
 	</div>
 	
