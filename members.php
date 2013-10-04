@@ -80,7 +80,7 @@
 			<div class="title">&raquo; Editor in Chief</div>
 			<div class="title">&raquo; School Events Section Head</div>
 			<div class="clear"></div>
-			<div class="bio">Hi, this is Jessica.  She likes puns.  But gummy worms are cool.  Teemo.</div>
+			<!--div class="bio">Hi, this is Jessica.  She likes puns.  But gummy worms are cool.  Teemo.</div-->
 		</div>
 		<div class="member">
 			<div class="pic" style="background-image: url(pics/faces/steve.jpg);"></div>
@@ -89,7 +89,6 @@
 			<div class="title">&raquo; Web Developer / Web Master</div>
 			<div class="title">&raquo; Technology Section Head</div>
 			<div class="clear"></div>
-			<div class="bio">Something about Steve goes here.</div>
 		</div>
 		<div class="member">
 			<div class="pic"></div>
@@ -97,7 +96,6 @@
 			<div class="title">&raquo; Club Vice President</div>
 			<div class="title">&raquo; Lifestyles Section Head</div>
 			<div class="clear"></div>
-			<div class="bio">Something about Cindy goes here.</div>
 		</div>
 		<div class="member">
 			<div class="pic"></div>
@@ -105,35 +103,30 @@
 			<div class="title">&raquo; Club Secretary</div>
 			<div class="title">&raquo; Entertainment Section Head</div>
 			<div class="clear"></div>
-			<div class="bio">Something about Mychelle goes here.</div>
 		</div>
 		<div class="member">
 			<div class="pic" style="background-image: url(pics/faces/amanda.jpg);"></div>
 			<div class="name" style="font-size: 35pt">Amanda Coccimiglio</div>
 			<div class="title">&raquo; Music Section Head</div>
 			<div class="clear"></div>
-			<div class="bio">Something about Amanada goes here.</div>
 		</div>
 		<div class="member">
 			<div class="pic"></div>
 			<div class="name">Dora Xiong</div>
 			<div class="title">&raquo; Reviews Section Head</div>
 			<div class="clear"></div>
-			<div class="bio">Something about Dora the Explorer goes here.</div>
 		</div>
 		<div class="member">
 			<div class="pic"></div>
 			<div class="name">Jenny Huang</div>
 			<div class="title">&raquo; Club Treasurer</div>
 			<div class="clear"></div>
-			<div class="bio">Something about Jenny goes here.</div>
 		</div>
 		<div class="member">
 			<div class="pic"></div>
 			<div class="name">June Lu</div>
 			<div class="title">&raquo; Photographer</div>
 			<div class="clear"></div>
-			<div class="bio">Something about June goes here.</div>
 		</div>
 	</div>
 	<div id="footer-wrapper">
