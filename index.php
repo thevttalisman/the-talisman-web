@@ -26,7 +26,7 @@
 			<li>
 				<a href="#" onclick="return false;">Newspapers</a>
 				<ul>
-					<li><a href="#" onclick="switchEdition('201304');return false;">April 2013</a></li>
+					<!--li><a href="#" onclick="switchEdition('201304');return false;">April 2013</a></li-->
 					<li><a href="#" onclick="switchEdition('201309');return false;">September 2013</a></li>
 				</ul>
 			</li>

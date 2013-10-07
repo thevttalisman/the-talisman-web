@@ -63,7 +63,7 @@
 			<li>
 				<a href="#" onclick="return false;">Newspapers</a>
 				<ul>
-					<li><a href="/index.html#e=201304">April 2013</a></li>
+					<!--li><a href="/index.html#e=201304">April 2013</a></li-->
 					<li><a href="/index.html#e=201309">September 2013</a></li>
 				</ul>
 			</li>
