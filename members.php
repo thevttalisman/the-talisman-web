@@ -74,7 +74,7 @@
 	
 	<div id="content-wrapper" class="js-masonry" data-masonry-options='{ "columnWidth": 475, "itemSelector": ".member" }'>
 		<div class="member">
-			<div class="pic"></div>
+			<div class="pic" style="background-image: url(pics/faces/jessica.jpg);"></div>
 			<div class="name">Jessica Sung</div>
 			<div class="title">&raquo; Club President</div>
 			<div class="title">&raquo; Editor in Chief</div>
