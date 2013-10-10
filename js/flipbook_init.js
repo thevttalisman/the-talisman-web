@@ -1,6 +1,6 @@
 var isZoomedIn = false;
 var beforeZoomScrollPos = 0;
-var selectedEdition = '201309';
+var selectedEdition = '201310';
 var currentPage = '1';
 var isDeleting = false;
 var papers = new Array();
@@ -10,7 +10,7 @@ papers['201304'][1] = 12;
 papers['201309'] = new Array();
 papers['201309'][0] = "2013/september/";
 papers['201309'][1] = 16;
-papers['201309'] = new Array();
+papers['201310'] = new Array();
 papers['201310'][0] = "2013/october/";
 papers['201310'][1] = 10;
 
