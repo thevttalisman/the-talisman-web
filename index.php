@@ -28,6 +28,7 @@
 				<ul>
 					<!--li><a href="#" onclick="switchEdition('201304');return false;">April 2013</a></li-->
 					<li><a href="#" onclick="switchEdition('201309');return false;">September 2013</a></li>
+					<li><a href="#" onclick="switchEdition('201310');return false;">October 2013</a></li>
 				</ul>
 			</li>
 			<li><a href="/submit.html">Submit</a></li>
