@@ -11,8 +11,8 @@ papers['201309'] = new Array();
 papers['201309'][0] = "2013/september/";
 papers['201309'][1] = 16;
 papers['201309'] = new Array();
-papers['201309'][0] = "2013/october/";
-papers['201309'][1] = 10;
+papers['201310'][0] = "2013/october/";
+papers['201310'][1] = 10;
 
 if(hash.get('e')) selectedEdition = hash.get('e');
 if(hash.get('p')) currentPage = hash.get('p');
