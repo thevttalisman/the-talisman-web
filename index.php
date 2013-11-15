@@ -1,4 +1,4 @@
-
+<?php $_GET['page'] = "home"; ?>
 <!doctype html>
 <!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
 <!--[if IE 7 ]>	<html lang="en" class="ie7"> <![endif]-->
@@ -10,30 +10,12 @@
 	<meta name="viewport" content="width=1200" />
 	<link type="text/css" rel="stylesheet" href="fonts/fonts.css"></link>
 	<link type="text/css" rel="stylesheet" href="css/general.css"></link>
-	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
-	<script type="text/javascript" src="js/hash.min.js"></script>
-	<script type="text/javascript" src="js/hashchange.min.js"></script>
-	<script type="text/javascript" src="js/turn.min.js"></script>
-	<script type="text/javascript" src="js/zoom.min.js"></script>
 	<style></style>
 </head>
 <body>
 	<div id="header">
 		<div id="logo"></div>
-		<ul id="nav">
-			<li><a href="/index.html" class="selected">Home</a></li>
-			<li>
-				<a href="#" onclick="return false;">Newspapers</a>
-				<ul>
-					<!--li><a href="#" onclick="switchEdition('201304');return false;">April 2013</a></li-->
-					<li><a href="#" onclick="switchEdition('201309');return false;">September 2013</a></li>
-					<li><a href="#" onclick="switchEdition('201310');return false;">October 2013</a></li>
-				</ul>
-			</li>
-			<li><a href="/submit.html">Submit</a></li>
-			<li><a href="/team.html">The Team</a></li>
-		</ul>
+<?php include "navigation.php"; ?>
 	</div>
 	
 	<div id="zoom-viewport">
@@ -50,6 +32,15 @@
 		<div class="licence"></div>
 	</div>
 	
-	<script type="text/javascript" src="js/flipbook_init.js"></script>
+	<script type="text/javascript" src="js/LAB.min.js"></script>
+	<script>
+	$LAB
+	.script("js/jquery-1.8.3.min.js").wait()
+	.script("js/hash.min.js")
+	.script("js/hashchange.min.js")
+	.script("js/turn.min.js")
+	.script("js/zoom.min.js").wait()
+	.script("js/flipbook_init.js");
+	</script>
 </body>
 </html>

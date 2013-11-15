@@ -4,5 +4,6 @@ RewriteBase /
 RewriteRule ^index.html$ index.php 
 RewriteRule ^submit.html$ submissions.php 
 RewriteRule ^team.html$ members.php 
+RewriteRule ^photos.html$ gallery.php 
 
 Redirect /submit /submit.html

@@ -1,4 +1,4 @@
-
+<?php $_GET['page'] = "team"; ?>
 <!doctype html>
 <!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
 <!--[if IE 7 ]>	<html lang="en" class="ie7"> <![endif]-->
@@ -10,8 +10,6 @@
 	<meta name="viewport" content="width=1200" />
 	<link type="text/css" rel="stylesheet" href="fonts/fonts.css"></link>
 	<link type="text/css" rel="stylesheet" href="css/general.css"></link>
-	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="js/masonry.min.js"></script>
 	<style>
 		.member {
 			width: 395px;
@@ -58,22 +56,10 @@
 <body>
 	<div id="header">
 		<div id="logo"></div>
-		<ul id="nav">
-			<li><a href="/index.html">Home</a></li>
-			<li>
-				<a href="#" onclick="return false;">Newspapers</a>
-				<ul>
-					<!--li><a href="/index.html#e=201304">April 2013</a></li-->
-					<li><a href="/index.html#e=201309">September 2013</a></li>
-					<li><a href="/index.html#e=201310">October 2013</a></li>
-				</ul>
-			</li>
-			<li><a href="/submit.html">Submit</a></li>
-			<li><a href="/team.html" class="selected">The Team</a></li>
-		</ul>
+<?php include "navigation.php"; ?>
 	</div>
 	
-	<div id="content-wrapper" class="js-masonry" data-masonry-options='{ "columnWidth": 475, "itemSelector": ".member" }'>
+	<div id="content-wrapper" class="js-masonry">
 		<div class="member">
 			<div class="pic" style="background-image: url(pics/faces/jessica.jpg);"></div>
 			<div class="name">Jessica Sung</div>
@@ -137,5 +123,10 @@
 		<div class="licence"></div>
 	</div>
 	
+	<script type="text/javascript" src="js/masonry.min.js"></script>
+	<script>
+		var msnry = new Masonry(document.querySelector("#content-wrapper"), { "columnWidth": 475, "itemSelector": ".member" });
+	</script>
 </body>
 </html>
+

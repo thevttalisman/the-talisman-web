@@ -1,4 +1,5 @@
 <?php
+$_GET['page'] = "submit";
 require_once('lib/recaptchalib.php');
 $publickey = "6LesL-cSAAAAAKWqJhjrA0JiAyLGHxSmLhfZPTml";
 $msg = "";
@@ -99,7 +100,6 @@ function errorCheck($field){
 	<link type="text/css" rel="stylesheet" href="fonts/fonts.css"></link>
 	<link type="text/css" rel="stylesheet" href="css/general.css"></link>
 	<link type="text/css" rel="stylesheet" href="css/submissions.css"></link>
-	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript">
 		var RecaptchaOptions = {
 			theme : 'custom',
@@ -111,19 +111,7 @@ function errorCheck($field){
 <body>
 	<div id="header">
 		<div id="logo"></div>
-		<ul id="nav">
-			<li><a href="/index.html">Home</a></li>
-			<li>
-				<a href="javascript:void(0);">Newspapers</a>
-				<ul>
-					<!--li><a href="/index.html#e=201304">April 2013</a></li-->
-					<li><a href="/index.html#e=201309">September 2013</a></li>
-					<li><a href="/index.html#e=201310">October 2013</a></li>
-				</ul>
-			</li>
-			<li><a href="/submit.html" class="selected">Submit</a></li>
-			<li><a href="/team.html">The Team</a></li>
-		</ul>
+<?php include "navigation.php"; ?>
 	</div>
 	
 	<?php if(strlen($msg) > 0) echo "<ul>$msg</ul>"; ?>

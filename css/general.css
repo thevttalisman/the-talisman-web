@@ -206,10 +206,13 @@ a {
 }
 
 #logo {
-	width: 926px;
+	max-width: 926px;
+	max-height: 176px;
+	width: 100%;
 	height: 176px;
 	background-image: url(../pics/TheTalismanLogo.png);
 	background-size: cover;
+	background-repeat: no-repeat;
 	margin:0 auto;
 }
 
