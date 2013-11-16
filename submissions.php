@@ -97,6 +97,7 @@ function errorCheck($field){
 <html>
 <head>
 	<title>Submit Your Article - The Talisman</title>
+	<meta name="viewport" content="width=1200" />
 	<link type="text/css" rel="stylesheet" href="fonts/fonts.css"></link>
 	<link type="text/css" rel="stylesheet" href="css/general.css"></link>
 	<link type="text/css" rel="stylesheet" href="css/submissions.css"></link>
