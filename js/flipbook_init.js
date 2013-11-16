@@ -3,47 +3,36 @@ var beforeZoomScrollPos = 0;
 var selectedEdition = '201311';
 var currentPage = '1';
 var isDeleting = false;
-var papers = new Array();
-papers['201304'] = [];
-papers['201304'][0] = "2013/april/";
-papers['201304'][1] = 12;
-papers['201309'] = [];
-papers['201309'][0] = "2013/september/";
-papers['201309'][1] = 16;
-papers['201310'] = [];
-papers['201310'][0] = "2013/october/";
-papers['201310'][1] = 10;
-papers['201311'] = [];
-papers['201311'][0] = "2013/november/";
-papers['201311'][1] = 12;
+var papers;
 
 if(hash.get('e')) selectedEdition = hash.get('e');
 if(hash.get('p')) currentPage = hash.get('p');
 
-for (var i = 0; i < papers[selectedEdition][1]; i++) {
-	var div = createPage(selectedEdition, (i + 1));
-	$("#flipbook").append(div);
-}
-
-$('#zoom-viewport').css("height", $('#flipbook').height());
-$('#flipbook').css("left", $(window).width()/2 -$("#flipbook").width()/2);
-
-$("#flipbook").turn({
-	width: 927,
-	height: 600,
-	autoCenter: true,
-	page: currentPage,
-	when: {
-		tap: function(event) {
-			$('#flipbook').zoom('zoomIn', e);
-		},
-		turned: function(event, page, view) {
-			if(!isDeleting) hash.add({ p: page });
-		}
+$.getJSON( "/json/papers.json", function( data ) {
+	papers = data;
+	for (var i = 0; i < papers[selectedEdition][1]; i++) {
+		var div = createPage(selectedEdition, (i + 1));
+		$("#flipbook").append(div);
 	}
-});
+	
 
-
+	$('#zoom-viewport').css("height", $('#flipbook').height());
+	$('#flipbook').css("left", $(window).width()/2 -$("#flipbook").width()/2);
+	
+	$("#flipbook").turn({
+		width: 927,
+		height: 600,
+		autoCenter: true,
+		page: currentPage,
+		when: {
+			tap: function(event) {
+				$('#flipbook').zoom('zoomIn', e);
+			},
+			turned: function(event, page, view) {
+				if(!isDeleting) hash.add({ p: page });
+			}
+		}
+	});
 
 	// Zoom.js
 
@@ -119,6 +108,9 @@ $("#flipbook").turn({
 			}
 		}
 	});
+});
+
+
 
 	// Using arrow keys to turn the page
 
