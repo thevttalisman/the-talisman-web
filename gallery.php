@@ -6,7 +6,7 @@
 <!--[if IE 9 ]>	<html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en" class="noie"> <!--<![endif]-->
 <head>
-	<title>The Crew - The Talisman</title>
+	<title>Photo Gallery - The Talisman</title>
 	<meta name="viewport" content="width=1200" />
 	<link type="text/css" rel="stylesheet" href="fonts/fonts.css"></link>
 	<link type="text/css" rel="stylesheet" href="css/general.css"></link>
