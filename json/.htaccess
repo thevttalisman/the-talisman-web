@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteBase /json/
+RewriteRule ^papers.json$ papers.php

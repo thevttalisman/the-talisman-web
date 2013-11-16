@@ -3,14 +3,14 @@ var gallery = {};
 var fHash = hash;
 var msnry;
 
-$.getJSON( "photos.json", function( data ) {
+$.getJSON( "/json/photos.json", function( data ) {
 	$.each( data, function( key, val ) {
 		albumIds[albumIds.length] = val['id'];
 		gallery[val['id']] = val;
 	});
 	
 	init_gallery();
-});			
+});
 function init_gallery() {
 	if(!fHash.get('a')) {
 		$("#content-wrapper").attr("class", "js-masonry");
