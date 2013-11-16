@@ -123,6 +123,8 @@
 		<div class="licence"></div>
 	</div>
 	
+	<?php include "special.php"; ?>
+	
 	<script type="text/javascript" src="js/masonry.min.js"></script>
 	<script>
 		var msnry = new Masonry(document.querySelector("#content-wrapper"), { "columnWidth": 475, "itemSelector": ".member" });

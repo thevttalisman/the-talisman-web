@@ -32,6 +32,8 @@
 		<div class="licence"></div>
 	</div>
 	
+	<?php include "special.php"; ?>
+	
 	<script type="text/javascript" src="js/LAB.min.js"></script>
 	<script>
 	$LAB

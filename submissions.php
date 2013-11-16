@@ -162,7 +162,9 @@ function errorCheck($field){
 		<a href="/team.html">The Team</a>
 		<div class="licence"></div>
 	</div>
-
+	
+	<?php include "special.php"; ?>
+	
 	<script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=<?php echo $publickey; ?>"></script>
 </body>
 </html>
