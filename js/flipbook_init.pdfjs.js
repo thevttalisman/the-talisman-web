@@ -29,7 +29,7 @@ function renderCanvases(edition) {
 	smallCanvases = [];
 	bigCanvases = [];
 	
-	PDFJS.getDocument("/papers/2013/november.pdf").then(function(_pdf) {
+	PDFJS.getDocument("/pdfs/2013/november.pdf").then(function(_pdf) {
 		pdf = _pdf;
 		//Render all the pages on a single canvas
 		for(var i = 0; i < pdf.numPages; i ++){ 
