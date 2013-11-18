@@ -112,7 +112,7 @@ function errorCheck($field){
 <body>
 	<div id="header">
 		<div id="logo"></div>
-<?php include "navigation.php"; ?>
+<?php include "include/navigation.php"; ?>
 	</div>
 	
 	<?php if(strlen($msg) > 0) echo "<ul>$msg</ul>"; ?>
@@ -156,14 +156,9 @@ function errorCheck($field){
 			<p class="formklein">All fields marked with <span style="font-weight: bolder; color: red;">*</span> are required.</p>
 		</div>
 	</form>
-	<div id="footer-wrapper">
-		<a href="/index.html">Home</a>
-		<a href="/submit.html">Submit</a>
-		<a href="/team.html">The Team</a>
-		<div class="licence"></div>
-	</div>
 	
-	<?php include "special.php"; ?>
+<?php include "include/footer.php"; ?>
+<?php include "include/special.php"; ?>
 	
 	<script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=<?php echo $publickey; ?>"></script>
 </body>

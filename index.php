@@ -15,7 +15,7 @@
 <body>
 	<div id="header">
 		<div id="logo"></div>
-<?php include "navigation.php"; ?>
+<?php include "include/navigation.php"; ?>
 	</div>
 	
 	<div id="zoom-viewport">
@@ -25,14 +25,8 @@
 		</div>
 	</div>
 	
-	<div id="footer-wrapper">
-		<a href="/index.html">Home</a>
-		<a href="/submit.html">Submit</a>
-		<a href="/team.html">The Team</a>
-		<div class="licence"></div>
-	</div>
-	
-	<?php include "special.php"; ?>
+<?php include "include/footer.php"; ?>
+<?php include "include/special.php"; ?>
 	
 	<script type="text/javascript" src="js/LAB.min.js"></script>
 	<script>
