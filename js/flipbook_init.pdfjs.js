@@ -5,16 +5,72 @@ var currentPage = '1';
 var isDeleting = false;
 var papers;
 
+var smallCanvases = [];
+var bigCanvases = [];
+var pdf = null;
+var rendered = 0;
+
 if(hash.get('e')) selectedEdition = hash.get('e');
 if(hash.get('p')) currentPage = hash.get('p');
 
+$("#flipbook").hide();
+$("#arrow-left").hide();
+$("#arrow-right").hide();
+$("<img/>").attr("src", "/pics/ajax-loader.gif").addClass("ajax-loader").appendTo("#zoom-viewport");
+
 $.getJSON( "/json/papers.json", function( data ) {
 	papers = data;
-	for (var i = 0; i < papers[selectedEdition][1]; i++) {
-		var div = createPage(selectedEdition, (i + 1));
-		$("#flipbook").append(div);
-	}
 	
+	renderCanvases(selectedEdition)
+});
+
+function renderCanvases(edition) {
+	PDFJS.disableWorker = true;
+	smallCanvases = [];
+	bigCanvases = [];
+	
+	PDFJS.getDocument("/papers/2013/november.pdf").then(function(_pdf) {
+		pdf = _pdf;
+		//Render all the pages on a single canvas
+		for(var i = 0; i < pdf.numPages; i ++){ 
+			renderPage(i + 1);
+		}
+		
+		
+	});
+}
+
+function renderPage(pnum) {
+	pdf.getPage(pnum).then(function(page){
+		var smallCanvas = document.createElement("canvas");
+		var bigCanvas = document.createElement("canvas");
+		var smallViewport = page.getViewport(464 / page.getViewport(1.0).width);
+		var bigViewport = page.getViewport(1107 / page.getViewport(1.0).width);
+		// changing canvas.width and/or canvas.height auto-clears the canvas
+		smallCanvas.width = smallViewport.width;
+		smallCanvas.height = smallViewport.height;
+		bigCanvas.width = bigViewport.width;
+		bigCanvas.height = bigViewport.height;
+		
+		page.render({canvasContext: smallCanvas.getContext('2d'), viewport: smallViewport});
+		page.render({canvasContext: bigCanvas.getContext('2d'), viewport: bigViewport}).then(function(){
+			rendered++;
+			if(rendered == pdf.numPages - 1) init_flipbook();
+		});
+		
+		smallCanvases[pnum-1] = smallCanvas;
+		bigCanvases[pnum-1] = bigCanvas;
+	});
+}
+
+function init_flipbook() {
+	for (var i = 0; i < smallCanvases.length; i++) {
+		$("#flipbook").append(createPage(i));
+	}
+	$("#zoom-viewport").find("img").remove();
+	$("#flipbook").show();
+	$("#arrow-left").show();
+	$("#arrow-right").show();
 
 	$('#zoom-viewport').css("height", $('#flipbook').height());
 	$('#flipbook').css("left", $(window).width()/2 -$("#flipbook").width()/2);
@@ -108,7 +164,7 @@ $.getJSON( "/json/papers.json", function( data ) {
 			}
 		}
 	});
-});
+}
 
 
 
@@ -154,42 +210,28 @@ $.getJSON( "/json/papers.json", function( data ) {
 
 function loadLargePage(page, pageElement) {
 	
-	var img = $('<img />');
-
-	img.load(function() {
-
-		var prevImg = pageElement.find('img');
-		$(this).css({width: '100%', height: '100%'});
-		$(this).appendTo(pageElement);
-		prevImg.remove();
-		
-	});
-
-	// Loadnew page
+	var img = bigCanvases[page-1];
+	var prevImg = pageElement.find('canvas');
 	
-	img.attr('src', 'papers/'+ papers[selectedEdition][0] + '/page' +  page + '.jpg');
+	$(prevImg).detach();
+	$(img).appendTo(pageElement);
+
 }
 
 // Load small page
 
 function loadSmallPage(page, pageElement) {
+
+	var img = smallCanvases[page-1];
+	var prevImg = pageElement.find('canvas');
 	
-	var img = pageElement.find('img');
-
-	img.css({width: '100%', height: '100%'});
-
-	img.unbind('load');
-	// Loadnew page
-
-	img.attr('src', 'papers/'+ papers[selectedEdition][0] + '/page' +  page + '-small.jpg');
+	$(prevImg).detach();
+	$(img).appendTo(pageElement);
 }
 
-function createPage(edition, page) {
-	var img = document.createElement('img');
+function createPage(page) {
 	var div = document.createElement('div');
-	img.src = 'papers/' + papers[edition][0] + '/page' + page + '-small.jpg';
-	$(div).append(img);
-	$(img).css({width: '100%', height: '100%'});
+	$(div).append(smallCanvases[page]);
 	return div;
 }
 

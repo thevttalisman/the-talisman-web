@@ -8,7 +8,7 @@ foreach(scandir("../papers/") as $year) {
 		if(in_array($month, $ignore)) continue;
 		
 		$pages = 0;
-		foreach(scandir("../papers/" . $year . "/" . $month . "/") as $page) {
+		foreach(scandir("../papers/" . $year . "/" . $month) as $page) {
 			if(!in_array($page, $ignore)) $pages++;
 		}
 		
