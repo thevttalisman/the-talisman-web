@@ -2,6 +2,8 @@
 $output = array();
 $ignore = array(".", "..", ".DS_Store", ".htaccess", "index.html");
 
+date_default_timezone_set("Canada/Pacific");
+
 foreach(scandir("../papers/") as $year) {
 	if(in_array($year, $ignore)) continue;
 	foreach(scandir("../papers/" . $year . "/") as $month) {
