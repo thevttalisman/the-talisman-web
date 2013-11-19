@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set("Canada/Pacific");
-if(getMonth() == 12) echo "<div class=\"xmas-lights\" style=\"background-image: url(pics/xmas-lights/anim-" . rand(1, 3) . ".gif);\"></div>"
+if(getMonth() == 12) echo "<div class=\"xmas-lights\" style=\"background-image: url(pics/xmas-lights/anim-" . rand(1, 3) . ".gif);\"></div>";
 
 
 function getMonth() {
