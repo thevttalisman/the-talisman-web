@@ -78,7 +78,7 @@
 			<div class="clear"></div>
 		</div>
 		<div class="member">
-			<div class="pic"></div>
+			<div class="pic" style="background-image: url(pics/faces/cindy.jpg);"></div>
 			<div class="name">Cindy Cao</div>
 			<div class="title">&raquo; Club Vice President</div>
 			<div class="title">&raquo; Lifestyles Section Head</div>
@@ -93,12 +93,12 @@
 		</div>
 		<div class="member">
 			<div class="pic" style="background-image: url(pics/faces/amanda.jpg);"></div>
-			<div class="name" style="font-size: 35pt">Amanda Coccimiglio</div>
+			<div class="name" style="font-size: 34pt">Amanda Coccimiglio</div>
 			<div class="title">&raquo; Music Section Head</div>
 			<div class="clear"></div>
 		</div>
 		<div class="member">
-			<div class="pic"></div>
+			<div class="pic" style="background-image: url(pics/faces/dora.jpg);"></div>
 			<div class="name">Dora Xiong</div>
 			<div class="title">&raquo; Reviews Section Head</div>
 			<div class="clear"></div>
